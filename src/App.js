@@ -4,21 +4,24 @@
  import Weather from './components/Weather';
 
 
- const API_KEY = "104ad819a9a2d91b1fe977d04bfa83af";
+//  const API_KEY = "104ad819a9a2d91b1fe977d04bfa83af" ;
 
  export default class App extends React.Component {
 
-  gettingWeather = async () => {
-      const api_url = await fetch(`api.openweathermap.org/data/2.5/weather?q={city name}&appid=${API_KEY}`);
-      const data = await api_url.json();
-      console.log(data);
+  gettingWeather =  (e) => {
+      e.preventDefault();
+      const city = e.target.elements.city.value;
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=104ad819a9a2d91b1fe977d04bfa83af`)
+      .then(data => data.json())
+      .then(res => console.log(res));
+      
   }
 
    render() {
      return(
       <div>
         <Info/>
-        <Form/>
+        <Form weatherApi={this.gettingWeather}/>
         <Weather/>
       </div>
      );

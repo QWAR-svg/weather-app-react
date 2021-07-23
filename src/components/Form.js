@@ -3,9 +3,12 @@ import React from 'react';
 export default class Form extends React.Component {
     render() {
         return (
-            <div>
-                <p>Form</p>
-            </div>
-        )
+            
+            <form onSubmit={this.props.weatherApi}>
+                <input name="city" type="text" placeholder="City"/>
+                <button >Get weather</button>
+            </form>
+
+        );
     }
 }

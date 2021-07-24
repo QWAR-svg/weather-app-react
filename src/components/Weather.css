@@ -1,0 +1,34 @@
+.weather-card {
+    width: 300px;
+    height: 400px;
+    background:gray ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-card:hover {
+}
+
+.hot {
+    background: url('../img/hot.jpg') center center/cover no-repeat;
+}
+
+.cold {
+    background: wheat;
+}
+
+.cold, .hot {
+    width: 300px;
+    height: 400px;
+}
+
+.cold:hover {
+    transform: scale(1.5);
+
+}
+
+.hot:hover{
+    transform: scale(1.5);
+
+}

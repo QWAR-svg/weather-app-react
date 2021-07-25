@@ -6,7 +6,7 @@ export default class Form extends React.Component {
             
             <form className="form-weather" onSubmit={this.props.weatherApi}>
                 <input name="city" type="text" placeholder="City"/>
-                <button >Get weather</button>
+                <button className="weather-btn" >Get weather</button>
             </form>
 
         );

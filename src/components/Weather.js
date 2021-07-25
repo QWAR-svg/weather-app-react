@@ -9,7 +9,7 @@ export default class Weather extends React.Component {
         const {temp,city, country,sunrise, sunset, error } = this.props.data;
        if (temp === undefined) {
             x = ""
-       } else if (temp > 20) {
+       } else if (temp > 50) {
             x = "Жара";
             z = "hot";
        } else {
